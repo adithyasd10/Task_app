@@ -3,40 +3,40 @@ import '../models/task.dart';
 
 class TaskCard extends StatelessWidget {
   final Task task;
-  final VoidCallback onToggle;
-  final VoidCallback onEdit;
+  final ValueChanged<bool?> onChanged;
   final VoidCallback onDelete;
 
   const TaskCard({
     super.key,
     required this.task,
-    required this.onToggle,
-    required this.onEdit,
+    required this.onChanged,
     required this.onDelete,
   });
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+      color: Colors.black.withOpacity(0.4),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      margin: const EdgeInsets.symmetric(vertical: 6),
       child: ListTile(
-        leading: IconButton(
-          icon: Icon(task.isDone ? Icons.check_circle : Icons.circle_outlined),
-          onPressed: onToggle,
-          color: task.isDone ? Colors.green : null,
+        leading: Checkbox(
+          value: task.isDone,
+          onChanged: onChanged,
+          activeColor: Colors.greenAccent,
         ),
         title: Text(
           task.title,
           style: TextStyle(
+            color: Colors.white,
+            fontSize: 18,
             decoration: task.isDone ? TextDecoration.lineThrough : null,
-            fontWeight: FontWeight.w500,
           ),
         ),
-        trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-          IconButton(icon: const Icon(Icons.edit), onPressed: onEdit),
-          IconButton(icon: const Icon(Icons.delete), onPressed: onDelete),
-        ]),
+        trailing: IconButton(
+          icon: const Icon(Icons.delete, color: Colors.redAccent),
+          onPressed: onDelete,
+        ),
       ),
     );
   }

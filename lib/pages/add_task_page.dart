@@ -23,39 +23,89 @@ class _AddTaskPageState extends State<AddTaskPage> {
 
   @override
   Widget build(BuildContext context) {
+    final isEditing = widget.task != null;
+
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.task == null ? "Add Task" : "Edit Task"),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          children: [
-            TextField(
-              controller: _controller,
-              autofocus: true,
-              decoration: const InputDecoration(
-                labelText: 'Task Title',
-                border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(12))),
+      body: Stack(
+        children: [
+          // Background Image
+          SizedBox.expand(
+            child: Image.asset(
+              'assets/animations/gradient12.jpg', // <-- your gradient image path
+              fit: BoxFit.cover,
+            ),
+          ),
+          // Overlay Content
+          SafeArea(
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  // AppBar-like back button and title
+                  Row(
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.arrow_back, color: Colors.white),
+                        onPressed: () => Navigator.pop(context),
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        isEditing ? "Edit Task" : "Add Task",
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 32),
+
+                  // Text field
+                  TextField(
+                    controller: _controller,
+                    autofocus: true,
+                    style: const TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.black.withOpacity(0.4),
+                      labelText: 'Task Title',
+                      labelStyle: const TextStyle(color: Colors.white70),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      prefixIcon: const Icon(Icons.title, color: Colors.white70),
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+
+                  // Save button
+                  ElevatedButton.icon(
+
+                    onPressed: () {
+                      final title = _controller.text.trim();
+                      if (title.isNotEmpty) {
+                        final newTask = Task(title: title, isDone: widget.task?.isDone ?? false);
+                        Navigator.pop(context, newTask);
+                      }
+                    },
+                    icon: const Icon(Icons.save),
+                    label: Text(isEditing ? 'Update Task' : 'Save Task'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.black,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+                    ),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(height: 16),
-            ElevatedButton.icon(
-              onPressed: () {
-                final title = _controller.text.trim();
-                if (title.isNotEmpty) {
-                  final newTask = Task(title: title, isDone: widget.task?.isDone ?? false);
-                  Navigator.pop(context, newTask);
-                }
-              },
-              icon: const Icon(Icons.save),
-              label: const Text('Save Task'),
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              ),
-            )
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
