@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task/pages/splash_screen.dart';
 import 'pages/home_page.dart';
 import 'theme.dart'; // Make sure theme.dart exists in lib/
 
@@ -15,7 +16,7 @@ class QuickTasksApp extends StatelessWidget {
       title: 'QuickTasks',
       debugShowCheckedModeBanner: false,
       theme: darkTheme, // Only dark theme used
-      home: const HomePage(),
+      home: const SplashScreen(),
     );
   }
 }
