@@ -1,16 +1,17 @@
-# task
+✅ Quick Tasks 
+A sleek, fast, and efficient Flutter task management app designed to help you stay productive. Quickly add, edit, delete, and manage your daily tasks with a smooth and modern UI.
 
-A new Flutter project.
+🚀 Features
+➕ Add new tasks effortlessly
 
-## Getting Started
+✏️ Edit tasks anytime
 
-This project is a starting point for a Flutter application.
+✅ Mark tasks as done
 
-A few resources to get you started if this is your first Flutter project:
+🗑 Delete completed or unwanted tasks
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🔍 Search functionality (optional: if added)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🌙 Dark & Light theme support (optional)
+
+💾 Local data persistence using Hive or SharedPreferences
