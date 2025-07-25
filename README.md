@@ -2,15 +2,17 @@
 
 **Quick Tasks** is a sleek, fast, and efficient Flutter task management app designed to help you stay productive. Quickly add, edit, delete, and manage your daily tasks with a smooth and modern UI.
 
+---
+
 ## 🚀 Features
 
-- ➕ **Add Tasks**: Add new tasks effortlessly.
-- ✏️ **Edit Tasks**: Edit your tasks anytime with ease.
-- ✅ **Mark as Done**: Keep track of completed tasks.
-- 🗑 **Delete Tasks**: Remove completed or unwanted tasks.
-- 🔍 **Search Functionality** *(optional)*: Quickly find your tasks.
-- 🌙 **Dark & Light Theme Support** *(optional)*: Choose your preferred theme.
-- 💾 **Local Data Persistence**: Data saved locally using **Hive** or **SharedPreferences**.
+- ➕ **Add Tasks** – Create new tasks in seconds  
+- ✏️ **Edit Tasks** – Modify existing tasks with ease  
+- ✅ **Mark as Done** – Stay organized by checking off completed tasks  
+- 🗑 **Delete Tasks** – Remove unwanted or finished tasks  
+- 🔍 **Search Tasks** *(optional)* – Quickly find tasks by keyword  
+- 🌙 **Dark & Light Theme Support** *(optional)* – Choose your preferred theme  
+- 💾 **Local Data Persistence** – Save data locally using **Hive** or **SharedPreferences**
 
 ---
 
@@ -18,17 +20,23 @@
 
 - **Flutter**
 - **Dart**
-- **Hive** or **SharedPreferences** for storage
+- **Hive** or **SharedPreferences** for local storage
+
+---
 
 ## 📱 Screenshots *(optional)*
 
-_Add screenshots here to showcase the UI._
+_Add screenshots here to showcase the app UI_
+
+---
 
 ## 🚧 Upcoming Features *(optional)*
 
-- Task reminders & notifications
-- Daily/weekly productivity stats
-- Cloud sync
+- ⏰ Task reminders & notifications  
+- 📊 Daily/weekly productivity stats  
+- ☁️ Cloud sync for multi-device support  
+
+---
 
 ## 📦 Installation
 
