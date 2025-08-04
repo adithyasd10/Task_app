@@ -1,4 +1,4 @@
-# ✅ Quick Tasks
+# ✅ Quick Tasks  
 
 **Quick Tasks** is a fast, minimalist Flutter task management app designed to boost your productivity. Create, update, and track your tasks with a clean and modern UI.
 
@@ -28,6 +28,11 @@
 
 _Showcase your app's interface with a few screenshots!_
 
+<p align="center">
+  <img src="screenshots/screen1.png" width="200"/>
+  <img src="screenshots/screen2.png" width="200"/>
+</p>
+
 ---
 
 ## 📈 Upcoming Features *(Optional)*
@@ -47,3 +52,4 @@ git clone https://github.com/yourusername/quick_tasks.git
 cd quick_tasks
 flutter pub get
 flutter run
+
