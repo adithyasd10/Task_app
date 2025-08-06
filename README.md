@@ -23,26 +23,6 @@
 - 🗃️ **Hive** / **SharedPreferences** – For efficient local data storage
 
 ---
-
-## 📸 Screenshots *(Optional)*
-
-_Showcase your app's interface with a few screenshots!_
-
-<p align="center">
-  <img src="screenshots/screen1.png" width="200"/>
-  <img src="screenshots/screen2.png" width="200"/>
-</p>
-
----
-
-## 📈 Upcoming Features *(Optional)*
-
-- ⏰ Task Reminders and Push Notifications  
-- 📊 Daily/Weekly Productivity Insights  
-- ☁️ Cloud Sync Support for Cross-Device Access  
-
----
-
 ## 📦 Getting Started
 
 ### 🔧 Installation
@@ -52,4 +32,3 @@ git clone https://github.com/yourusername/quick_tasks.git
 cd quick_tasks
 flutter pub get
 flutter run
-
