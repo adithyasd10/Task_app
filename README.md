@@ -32,3 +32,4 @@ git clone https://github.com/yourusername/quick_tasks.git
 cd quick_tasks
 flutter pub get
 flutter run
+.
